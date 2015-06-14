@@ -1,0 +1,83 @@
+#navMain { 
+  position:relative; 
+  width:200px; 
+  margin:0 auto; 
+}
+#navMain ul, #navMain li, #navMain a {
+  position:relative; 
+  padding:0; 
+  margin:0; 
+  border:0; text-decoration:none; 
+}
+#navMain ul li {
+  display:block; 
+} 
+#navMain ul li a {
+  display:block; 
+  color:#fff;
+  padding:10px 10px;
+  position: relative;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+#navMain > ul > li > a {
+    background: #494848;
+    box-shadow: 0 1px 0 #1D1C1C inset, 0 -1px 0 #1D1C1C inset;
+}
+#navMain ul ul > li > a { 
+  padding-left:20px;
+}
+#navMain ul ul > li { 
+    background: #333;
+    box-shadow: 0 1px 0 #444 inset, 0 -1px 0 #222 inset;
+}
+#navMain ul ul ul > li > a { 
+  padding-left:40px;
+}
+#navMain ul ul ul > li { 
+    background: #555;
+    box-shadow: 0 1px 0 #666 inset, 0 -1px 0 #444 inset;
+}
+#navMain ul ul ul ul > li > a { 
+  padding-left:60px;
+}
+#navMain ul ul ul ul > li { 
+    background: #888;
+    box-shadow: 0 1px 0 #999 inset, 0 -1px 0 #777 inset;
+}
+#navMain ul li:hover {
+    background: #20638f;
+    box-shadow: 0 1px 0 #409ad5 inset, 0 -1px 0 #20638f inset;
+}
+#navMain li.hasChildren > ul {
+  display:none;
+}
+/* ------------------------------- */
+.hasChildren:after {
+    position: absolute;
+    content: '\25BC';
+    display: block;
+    font-size: 0.7em;
+    color: #fff;
+    top: 14px;
+    right: 10px;
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+.hasChildren.open:after {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+/* ------------------------------- */
+
