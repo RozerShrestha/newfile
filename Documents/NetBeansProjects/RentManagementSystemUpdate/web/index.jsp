@@ -6,7 +6,8 @@
 <link href="assets/css/sidemenu1.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/table.css" rel="stylesheet" type="text/css"/>
 
-     
+        <script src="assets/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
+        <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
 
 <h1>Rent Management System</h1>
 

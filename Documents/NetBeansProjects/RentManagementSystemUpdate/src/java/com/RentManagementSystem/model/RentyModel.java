@@ -21,17 +21,16 @@ public class RentyModel {
     {
         DBConnection connection=new DBConnection();
         connection.open();
-        String sql="INSERT INTO rentees(rentee_name,phone_no,email,parmanent_address,rent_date, status,rentee_immidate_contact_name,rentee_immidate_contact_phno,rentee_information) VALUES(?,?,?,?,?,?,?,?,?)";
-        
+        String sql="INSERT INTO rentees(rentee_name,phone_no,email,parmanent_address,rent_date,status,rentee_immidate_contact_name,rentee_immidate_contact_phno,rentee_information) VALUES(??????????)";
         PreparedStatement statement=connection.initStatement(sql);
         statement.setString(1,rentees.getRenteeName());
-        statement.setString(2, rentees.getPhoneNo());
+        statement.setLong(2, rentees.getPhoneNo());
         statement.setString(3, rentees.getEmail());
         statement.setString(4, rentees.getParmanentAddress());
         statement.setString(5, rentees.getRentDate());
-       statement.setBoolean(6, rentees.isStatus());
+        statement.setBoolean(6, rentees.isStatus());
         statement.setString(7, rentees.getRenteeImmidateContactName());
-        statement.setString(8, rentees.getRenteeImmidateContactPhno());
+        statement.setLong(8, rentees.getRenteeImmidateContactPhno());
         statement.setString(9, rentees.getRenteeInformation());
         int result=connection.executeUpdate();
         
@@ -42,16 +41,16 @@ public class RentyModel {
     {
         DBConnection connection=new DBConnection();
         connection.open();
-        String sql="UPDATE rentees SET rentee_name=?, phone_no=?, email=?, parmanent_address=?, rent_date=?, rentee_immidate_contact_name=?, rentee_immidate_contact_phno=?, rentee_information=? WHERE rentee_id=?";
+        String sql="UPDATE rentees SET rentee_name=?, phone_no=?, email=?, parmanent_address=?, rent_date=?, status=?, rentee_immidate_contact_name=?, rentee_immidate_contact_phno=?, rentee_information=? WHERE rentee_id=?";
         PreparedStatement statement=connection.initStatement(sql);
         statement.setString(1, rentees.getRenteeName());
-        statement.setString(2,rentees.getPhoneNo());
+        statement.setLong(2,rentees.getPhoneNo());
         statement.setString(3, rentees.getEmail());
         statement.setString(4, rentees.getParmanentAddress());
          statement.setString(5, rentees.getRentDate());
-//        statement.setBoolean(6, rentees.isStatus());
+        statement.setBoolean(6, rentees.isStatus());
         statement.setString(7, rentees.getRenteeImmidateContactName());
-        statement.setString(8, rentees.getRenteeImmidateContactPhno());
+        statement.setLong(8, rentees.getRenteeImmidateContactPhno());
         statement.setString(9, rentees.getRenteeInformation());
         int result=connection.executeUpdate();
         
@@ -82,13 +81,13 @@ public class RentyModel {
                 Rentees r=new Rentees();
                 r.setRenteeId(Integer.parseInt(rs.getString("rentee_id")));
                 r.setRenteeName(rs.getString("rentee_name"));
-                r.setPhoneNo((rs.getString("phone_no")));
+                r.setPhoneNo(Integer.parseInt(rs.getString("phone_no")));
                 r.setEmail(rs.getString("email"));
                 r.setParmanentAddress(rs.getString("parmanent_address"));
                 r.setRentDate(rs.getString("rent_date"));
-//                r.setStatus(rs.getBoolean("status"));
+                r.setStatus(rs.getBoolean("status"));
                 r.setRenteeImmidateContactName(rs.getString("rentee_immidate_contact_name"));
-                r.setRenteeImmidateContactPhno((rs.getString("rentee_immidate_contact_phno")));
+                r.setRenteeImmidateContactPhno(Integer.parseInt(rs.getString("rentee_immidate_contact_phno")));
                 r.setRenteeInformation(rs.getString("rentee_information"));
                 rentees.add(r);
         }

@@ -5,9 +5,6 @@
  */
 package com.RentManagementSystem.entities;
 
-import java.sql.Date;
-
-
 /**
  *
  * @author Rozer Shrestha
@@ -16,25 +13,25 @@ public class Rentees {
     private int renteeId;
     private String renteeName;
     private String parmanentAddress;
-    private String phoneNo;
+    private long phoneNo;
     private String email;
     private String rentDate;
-    private Boolean status;
+    private boolean status;
     private String renteeImmidateContactName;
-    private String renteeImmidateContactPhno;
+    private long renteeImmidateContactPhno;
     private String renteeInformation;
 
     public Rentees() {
     }
 
-    public Rentees(int renteeId, String renteeName, String parmanentAddress, String phoneNo, String email, String rentDate,Boolean status, String renteeImmidateContactName, String renteeImmidateContactPhno, String renteeInformation) {
+    public Rentees(int renteeId, String renteeName, String parmanentAddress, long phoneNo, String email, String rentDate, boolean status, String renteeImmidateContactName, long renteeImmidateContactPhno, String renteeInformation) {
         this.renteeId = renteeId;
         this.renteeName = renteeName;
         this.parmanentAddress = parmanentAddress;
         this.phoneNo = phoneNo;
         this.email = email;
         this.rentDate = rentDate;
-       this.status = status;
+        this.status = status;
         this.renteeImmidateContactName = renteeImmidateContactName;
         this.renteeImmidateContactPhno = renteeImmidateContactPhno;
         this.renteeInformation = renteeInformation;
@@ -52,7 +49,7 @@ public class Rentees {
         return parmanentAddress;
     }
 
-    public String getPhoneNo() {
+    public long getPhoneNo() {
         return phoneNo;
     }
 
@@ -64,7 +61,7 @@ public class Rentees {
         return rentDate;
     }
 
-    public Boolean isStatus() {
+    public boolean isStatus() {
         return status;
     }
 
@@ -72,7 +69,7 @@ public class Rentees {
         return renteeImmidateContactName;
     }
 
-    public String getRenteeImmidateContactPhno() {
+    public long getRenteeImmidateContactPhno() {
         return renteeImmidateContactPhno;
     }
 
@@ -92,7 +89,7 @@ public class Rentees {
         this.parmanentAddress = parmanentAddress;
     }
 
-    public void setPhoneNo(String phoneNo) {
+    public void setPhoneNo(long phoneNo) {
         this.phoneNo = phoneNo;
     }
 
@@ -104,7 +101,7 @@ public class Rentees {
         this.rentDate = rentDate;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
@@ -112,7 +109,7 @@ public class Rentees {
         this.renteeImmidateContactName = renteeImmidateContactName;
     }
 
-    public void setRenteeImmidateContactPhno(String renteeImmidateContactPhno) {
+    public void setRenteeImmidateContactPhno(long renteeImmidateContactPhno) {
         this.renteeImmidateContactPhno = renteeImmidateContactPhno;
     }
 
@@ -125,9 +122,5 @@ public class Rentees {
         return "Rentees{" + "renteeId=" + renteeId + ", renteeName=" + renteeName + ", parmanentAddress=" + parmanentAddress + ", phoneNo=" + phoneNo + ", email=" + email + ", rentDate=" + rentDate + ", status=" + status + ", renteeImmidateContactName=" + renteeImmidateContactName + ", renteeImmidateContactPhno=" + renteeImmidateContactPhno + ", renteeInformation=" + renteeInformation + '}';
     }
 
-   
-   
-
-    
     
 }
