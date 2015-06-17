@@ -19,7 +19,7 @@ public class Rentees {
     private String phoneNo;
     private String email;
     private String rentDate;
-    private Boolean status;
+    private boolean status;
     private String renteeImmidateContactName;
     private String renteeImmidateContactPhno;
     private String renteeInformation;
@@ -27,7 +27,7 @@ public class Rentees {
     public Rentees() {
     }
 
-    public Rentees(int renteeId, String renteeName, String parmanentAddress, String phoneNo, String email, String rentDate,Boolean status, String renteeImmidateContactName, String renteeImmidateContactPhno, String renteeInformation) {
+    public Rentees(int renteeId, String renteeName, String parmanentAddress, String phoneNo, String email, String rentDate,boolean status, String renteeImmidateContactName, String renteeImmidateContactPhno, String renteeInformation) {
         this.renteeId = renteeId;
         this.renteeName = renteeName;
         this.parmanentAddress = parmanentAddress;
@@ -64,7 +64,11 @@ public class Rentees {
         return rentDate;
     }
 
-    public Boolean isStatus() {
+    /**
+     *
+     * @return
+     */
+    public boolean isStatus() {
         return status;
     }
 
@@ -104,7 +108,7 @@ public class Rentees {
         this.rentDate = rentDate;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

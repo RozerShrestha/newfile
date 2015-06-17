@@ -1,8 +1,10 @@
+<%@page import="com.RentManagementSystem.entities.Rentees"%>
 
-<h2>Add Record of Rentee</h2>
-<form role="form" action="SaveRentee.jsp" method="post"> 
-    <label>Name:</label>
-    <input type="text" class="form-control" name="rentee_name" placeholder="Enter Name of the Rentee">            
+<% Rentee re=new Rentee(); %>
+<h1>Edit Rentee Information</h1>
+<form role="form" action="SaveRentee.jsp" method="post">
+   <label>Name:</label>
+    <input value="<%=" type="text" class="form-control" name="rentee_name" placeholder="Enter Name of the Rentee">            
     <label>Parmanent Adress:</label>
     <input type="text" class="form-control" name="parmanent_address" placeholder="Enter parmanent address">
     <label>Phone No:</label>
@@ -21,4 +23,5 @@
      <input type="text" class="form-control" name="rentee_information" placeholder="Enter rentee brief information">
     <br>
     <button type="submit" class="btn btn-default">Submit</button>
-</form>  
+    
+</form>

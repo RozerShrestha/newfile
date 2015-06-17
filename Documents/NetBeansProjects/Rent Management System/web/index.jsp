@@ -94,7 +94,7 @@
         </li>
         <br>
         <li>
-            <a href="#">Add New Room</a>
+            <div><a href="#" class="btn btn-primary ">Add New Room</a></div>
             
         </li>
     </ul>
